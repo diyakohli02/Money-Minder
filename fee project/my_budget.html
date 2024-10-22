@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.income-item, .budget-item {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#summary-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Expense Tracking Website</h1>
+    </header>
+
+    <section class="income-section">
+        <h2>Set Monthly Incomes</h2>
+        <div id="income-list">
+            <div class="income-item">
+                <label for="income-1">Income 1: </label>
+                <input type="number" id="income-1" placeholder="Enter amount">
+            </div>
+        </div>
+        <button id="add-income-btn">Add Another Income</button>
+    </section>
+
+    <section class="budget-section">
+        <h2>Set Budget Percentages</h2>
+        <div class="budget-item">
+            <label for="food-budget">Food: </label>
+            <input type="number" id="food-budget" placeholder="Enter percentage" min="0" max="100">
+        </div>
+        <div class="budget-item">
+            <label for="housing-budget">Housing: </label>
+            <input type="number" id="housing-budget" placeholder="Enter percentage" min="0" max="100">
+        </div>
+        <div class="budget-item">
+            <label for="entertainment-budget">Entertainment: </label>
+            <input type="number" id="entertainment-budget" placeholder="Enter percentage" min="0" max="100">
+        </div>
+    </section>
+
+    <section class="summary-section">
+        <h2>Summary</h2>
+        <p id="total-income">Total Income: $0</p>
+        <p id="total-budget">Total Budget: 0%</p>
+    </section>
+
+    <button id="calculate-btn">Calculate</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
